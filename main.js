@@ -12,6 +12,8 @@ var randomnbum = Math.floor(Math.random() * 4)
 
 console.log(randomnbum)
 
+
+//randomizes background
 if ( randomnbum == 0 ) {
     html.style.backgroundImage = "url('" + backgrounds[0] + "')"
 } else if ( randomnbum == 1) {
