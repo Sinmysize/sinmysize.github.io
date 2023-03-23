@@ -45,7 +45,6 @@ document.getElementById("login").addEventListener('click', ()=>{
     }, 1000)
 })
 
-
 //clock
 
 function timeSet() {
