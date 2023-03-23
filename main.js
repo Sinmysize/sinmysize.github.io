@@ -41,7 +41,7 @@ document.getElementById("login").addEventListener('click', ()=>{
     }, 500)
 
     setTimeout( ()=>{
-        window.open("home.html", "_self")
+        window.open("site.html", "_self")
     }, 1000)
 })
 
