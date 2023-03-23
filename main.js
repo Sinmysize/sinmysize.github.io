@@ -45,8 +45,6 @@ document.getElementById("login").addEventListener('click', ()=>{
     }, 1000)
 })
 
-//random 
-
 
 //clock
 
