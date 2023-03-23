@@ -12,8 +12,6 @@ var randomnbum = Math.floor(Math.random() * 4)
 
 console.log(randomnbum)
 
-
-//randomizes background
 if ( randomnbum == 0 ) {
     html.style.backgroundImage = "url('" + backgrounds[0] + "')"
 } else if ( randomnbum == 1) {
@@ -27,43 +25,28 @@ if ( randomnbum == 0 ) {
 //login
 
 document.getElementById("login").addEventListener('click', ()=>{
-    const trueUser = "Sinmysize"
-    const truePass = "sinnamon"
+    const loginArea = document.getElementById('loginArea')
+    const Background = document.getElementById('frost')
+    const clock = document.getElementById('clockArea')
 
-    const usernameInput = document.getElementById('user').value
-    const passwordInput = document.getElementById('pass').value
+    loginArea.style.transitionDuration = "1s"
+    loginArea.style.padding = "100px"
+    loginArea.style.opacity = "0"
+    Background.style.animation = "fadeOut 0.5s ease-in"
+    clock.style.animation = "clockFadeOut 0.5s ease-in"
+    clock.style.opacity = "0"
 
-    if ( usernameInput == trueUser && passwordInput == truePass) {
-        const loginArea = document.getElementById('loginArea')
-        const Background = document.getElementById('frost')
-        const clock = document.getElementById('clockArea')
+    setTimeout(()=>{
+        Background.style.backgroundColor = 'black'
+    }, 500)
 
-        loginArea.style.transitionDuration = "1s"
-        loginArea.style.padding = "100px"
-        loginArea.style.opacity = "0"
-        Background.style.animation = "fadeOut 0.5s ease-in"
-        clock.style.animation = "clockFadeOut 0.5s ease-in"
-        clock.style.opacity = "0"
-
-        setTimeout(()=>{
-            Background.style.backgroundColor = 'black'
-        }, 500)
-
-        setTimeout( ()=>{
-            window.open("site.html", "_self")
-        }, 1000)
-    }
+    setTimeout( ()=>{
+        window.open("home.html", "_self")
+    }, 1000)
 })
 
 //random 
 
-document.getElementById('forgotPass').addEventListener('mouseover', ()=>{
-    document.getElementById('forgotPass').innerHTML = "The Username is Sinmysize"
-})
-
-document.getElementById('forgotPass').addEventListener('click', ()=>{
-    document.getElementById('forgotPass').innerHTML = "The Password is sinnamon"
-})
 
 //clock
 
