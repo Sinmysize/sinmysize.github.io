@@ -262,7 +262,7 @@
 .topBarClockArea {
     z-index: 1;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 40px;
+    font-size: 35px;
     overflow-x: hidden;
     left: 65%;
     top: 30%;
@@ -272,7 +272,7 @@
     opacity: 0.5;
     transition-duration: 0.5s;
     animation: timeFadeIn 0.5s ease-in;
-    margin: 0;
+    margin: 35px;
 }
 
 .blurArea {
