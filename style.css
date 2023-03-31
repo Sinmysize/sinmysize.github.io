@@ -302,6 +302,10 @@ html {
     color: white;
     background-color: black;
 }
+
+.body {
+    overflow: hidden;
+}
 /* JAVASCRIPT */
 @keyframes fadeIn {
     0% {
