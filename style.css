@@ -17,6 +17,9 @@
     font-size: 40px;
     margin: 35px;
     color: white;
+    text-shadow: 0px 0px 10px white;
+
+    animation: FadeIn 0.5s ease-in-out;
 }
 
 .loginArea {
@@ -91,10 +94,18 @@
 }
 
 .topBar {
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.15);
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.195);
     border-bottom: 2px solid rgba(255, 255, 255, 0.195);
-    box-shadow: 0px 0px 5px white;
+    border-right: 2px solid rgba(255, 255, 255, 0.195);
+    border-bottom-right-radius: 20px;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 50%;
+    text-align: left;
+    animation: FadeIn 0.5s ease-in;
 }
 
 .topButton {
@@ -132,7 +143,7 @@
     background-color: rgba(0, 0, 0, 0);
     border: none;
     filter: drop-shadow(0px 0px 3px white);
-    z-index: 2;
+    z-index: 6;
     position: absolute;
     animation: FadeIn 0.5s ease-in;
     top: 0;
@@ -161,7 +172,7 @@
     padding-top: 50px;
     height: 100%;
     max-height: 890;
-    z-index: 0;
+    z-index: 5;
     animation: FadeIn 0.5s ease-in;
 }
 
@@ -219,12 +230,9 @@
     align-items: center;
     box-shadow: 0px 0px 5px rgb(92, 92, 92);
     text-shadow: 0px 0px 5px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -300%);
     opacity: 1;
     animation: FadeIn 0.5s ease-in;
-
+    overflow: hidden;
 }
 
 .wait {
@@ -250,6 +258,39 @@
     opacity: 1;
     animation: FadeIn 0.5s ease-in;
 }
+
+.topBarClockArea {
+    z-index: 1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    overflow-x: hidden;
+    left: 65%;
+    top: 30%;
+    float: right;
+    position: absolute;
+    text-shadow: 0px 0px 10px;
+    opacity: 0.5;
+    transition-duration: 0.5s;
+    animation: timeFadeIn 0.5s ease-in;
+    margin: 0;
+}
+
+.blurArea {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.705);
+    overflow: hidden;
+    z-index: 4;
+    position: absolute;
+    backdrop-filter: blur(3px);
+    display: none;
+    transition-duration: 0.4s;
+    opacity: 0;
+}
+
+
 
 html {
     background-image: url();
@@ -357,4 +398,16 @@ html {
     25% {opacity: 0;}
     50% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+@keyframes FadeInTopBar {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+
+    100%  {
+        opacity: 1;
+        height: 120px;
+    }
 }
