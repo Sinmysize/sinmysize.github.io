@@ -16,9 +16,9 @@
 .title {
     font-size: 40px;
     margin: 35px;
+    padding: 10;
     color: white;
     text-shadow: 0px 0px 10px white;
-
     animation: FadeIn 0.5s ease-in-out;
 }
 
@@ -86,11 +86,12 @@
     overflow-x: hidden;
     left: 50%;
     position: absolute;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 30%);
     text-shadow: 0px 0px 10px;
     opacity: 0.5;
     transition-duration: 0.5s;
     animation: timeFadeIn 0.5s ease-in;
+    padding: 10px;
 }
 
 .topBar {
@@ -102,10 +103,12 @@
     border-bottom-right-radius: 20px;
     top: 0;
     left: 0;
-    margin: 0;
-    width: 50%;
-    text-align: left;
+    margin: auto;
     animation: FadeIn 0.5s ease-in;
+    float: left;
+    list-style-type: none;
+    display: flex;
+    width: 50%;
 }
 
 .topButton {
@@ -262,18 +265,14 @@
 .topBarClockArea {
     z-index: 1;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 35px;
-    overflow-x: hidden;
-    left: 65%;
-    top: 0;
-    float: right;
-    position: absolute;
+    font-size: 40px;
     text-shadow: 0px 0px 10px;
     opacity: 0.5;
     transition-duration: 0.5s;
     animation: timeFadeIn 0.5s ease-in;
-    margin: 40px;
-    padding: 10px;
+    padding: 10;
+    margin: 35px;
+    margin-left: auto;
 }
 
 .blurArea {
@@ -302,11 +301,6 @@ html {
     user-select: none;
     color: white;
     background-color: black;
-}
-
-body {
-    overflow: hidden;
-    margin: 0;
 }
 /* JAVASCRIPT */
 @keyframes fadeIn {
