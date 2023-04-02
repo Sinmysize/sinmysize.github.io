@@ -125,7 +125,7 @@ home.addEventListener('click', ()=> {
         },200)
 
         setTimeout(()=>{
-            window.open("home.html", "_self")
+            window.open("site.html", "_self")
             homeOpen = true
         }, 1500)
     }
