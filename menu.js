@@ -89,4 +89,101 @@ function timeSet() {
 
 timeSet()
 
+// button functions
 
+let homeOpen = false
+let aboutOpen = false
+let discordOpen = false
+
+let home = document.getElementById("home")
+let about = document.getElementById("about")
+let discord = document.getElementById("discord")
+
+let topBar = document.getElementById('topbar')
+let anim  = document.getElementsByClassName("anim")[0]
+let anim2 = document.getElementsByClassName('anim')[1]
+let siteBG = document.getElementById("sitebg")
+
+home.addEventListener('click', ()=> {
+    if (homeOpen == true) {
+        return
+    } else if (homeOpen == false) {
+
+        topBar.style.animation = "FadeOutTopBar 1.5s ease-in-out"
+        anim.style.opacity = '0'
+        anim2.style.opacity = '0'
+        siteBG.style.animation = "siteClose 0.5 ease-in-out"
+        siteBG.style.backgroundColor = "black"
+        topBar.style.height = "0"
+        topBar.style.opacity = "0"
+
+        blurA.style.opacity = "0"
+        menu.style.width = '0px'
+
+        setTimeout(()=>{
+            blurA.style.display = "none"
+        },200)
+
+        setTimeout(()=>{
+            window.open("home.html", "_self")
+            homeOpen = true
+        }, 1500)
+    }
+})
+
+about.addEventListener("click", ()=>{
+    if (aboutOpen == true) {
+        return
+    } else if (aboutOpen == false) {
+
+        topBar.style.animation = "FadeOutTopBar 1.5s ease-in-out"
+        anim.style.opacity = '0'
+        anim2.style.opacity = '0'
+        siteBG.style.animation = "siteClose 0.5 ease-in-out"
+        siteBG.style.backgroundColor = "black"
+        topBar.style.height = "0"
+        topBar.style.width = "0"
+        topBar.style.opacity = "0"
+
+        blurA.style.opacity = "0"
+        menu.style.width = '0px'
+
+        setTimeout(()=>{
+            blurA.style.display = "none"
+        },200)
+
+
+        setTimeout(()=>{
+            window.open("about.html", "_self")
+            aboutOpen = true
+        }, 1500)
+    }
+})
+
+discord.addEventListener("click", ()=>{
+    if (discordOpen == true) {
+        return 
+    } else if (discordOpen == false) {
+
+        topBar.style.animation = "FadeOutTopBar 1.5s ease-in-out"
+        anim.style.opacity = '0'
+        anim2.style.opacity = '0'
+        siteBG.style.animation = "siteClose 0.5 ease-in-out"
+        siteBG.style.backgroundColor = "black"
+        topBar.style.height = "0"
+        topBar.style.width = "0"
+        topBar.style.opacity = "0"
+
+        blurA.style.opacity = "0"
+        menu.style.width = '0px'
+
+        setTimeout(()=>{
+            blurA.style.display = "none"
+        },200)
+
+        setTimeout(()=>{
+            window.open("discord.html", "_self")
+            discordOpen = true
+        }, 1500)
+    }
+})
