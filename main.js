@@ -32,7 +32,6 @@ document.getElementById("login").addEventListener('click', ()=>{
     loginArea.style.transitionDuration = "1s"
     loginArea.style.padding = "100px"
     loginArea.style.opacity = "0"
-    Background.style.animation = "fadeOut 0.5s ease-in"
     clock.style.animation = "clockFadeOut 0.5s ease-in"
     clock.style.opacity = "0"
 
@@ -41,9 +40,12 @@ document.getElementById("login").addEventListener('click', ()=>{
     }, 500)
 
     setTimeout( ()=>{
-        window.open("site.html", "_self")
+        window.open("home.html", "_self")
     }, 1000)
 })
+
+//random 
+
 
 //clock
 
