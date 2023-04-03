@@ -114,6 +114,7 @@
     animation: FadeInTopBar 1.5s ease-in-out;
     transition-duration: 0.4s;
     height: 139;
+    overflow: hidden;
 }
 
 .topButton {
