@@ -70,7 +70,7 @@
     background-color: rgba(0, 0, 0, 0.705);
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     position: absolute;
     left: 0;
     top: 0;
@@ -200,7 +200,7 @@
     transition-duration: 0.4s;
     left: 0;
     top: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     margin: 10px;
     text-align: center;
 }
@@ -235,6 +235,7 @@
     display: none;
     transition-duration: 0.4s;
     opacity: 0;
+    margin: 0;
 }
 
 .anim {
