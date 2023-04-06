@@ -5,10 +5,12 @@ const backgrounds = {
     0: `https://media.tenor.com/zvWdei-o1BIAAAAC/anime.gif`,
     1: `https://media.tenor.com/WeOTjjZcq38AAAAC/starry-night-anime.gif`,
     2: `https://media.tenor.com/N_HSAkMojIQAAAAC/rain-aesthetic.gif`,
-    3: `https://media.tenor.com/5QafrcxHajYAAAAC/chill.gif`
+    3: `https://media.tenor.com/5QafrcxHajYAAAAC/chill.gif`,
+    4: `https://media.tenor.com/G6vtPJTsK-wAAAAC/nature-background.gif`,
+    5: `https://media.tenor.com/pkMEpw5eAeQAAAAC/anime-cute.gif`
 }
 
-var randomnbum = Math.floor(Math.random() * 4)
+var randomnbum = Math.floor(Math.random() * 6)
 
 console.log(randomnbum)
 
@@ -20,6 +22,10 @@ if ( randomnbum == 0 ) {
     html.style.backgroundImage = "url('" + backgrounds[2] + "')"
 } else if ( randomnbum == 3) {
     html.style.backgroundImage = "url('" + backgrounds[3] + "')"
+} else if ( randomnbum == 4) {
+    html.style.backgroundImage = "url('" + backgrounds[4] + "')"
+} else if ( randomnbum == 5) {
+    html.style.backgroundImage = "url('" + backgrounds[5] + "')"
 }
 
 //login
