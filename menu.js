@@ -79,6 +79,8 @@ let anim  = document.getElementsByClassName("anim")[0]
 let anim2 = document.getElementsByClassName('anim')[1]
 let siteBG = document.getElementById("sitebg")
 
+let contents = document.getElementById("contents")
+
 home.addEventListener('click', ()=> {
     if (homeOpen == true) {
         return
@@ -94,6 +96,12 @@ home.addEventListener('click', ()=> {
 
         blurA.style.opacity = "0"
         menu.style.width = '0px'
+
+        if (contents) {
+            contents.style.animation = "closeContent 2s ease-in-out"
+        } else {
+            console.log("Content ID Not Found")
+        }
 
         setTimeout(()=>{
             blurA.style.display = "none"
@@ -123,6 +131,12 @@ about.addEventListener("click", ()=>{
         blurA.style.opacity = "0"
         menu.style.width = '0px'
 
+        if (contents) {
+            contents.style.animation = "closeContent 2s ease-in-out"
+        } else {
+            console.log("Content ID Not Found")
+        }
+
         setTimeout(()=>{
             blurA.style.display = "none"
         },200)
@@ -151,6 +165,12 @@ discord.addEventListener("click", ()=>{
 
         blurA.style.opacity = "0"
         menu.style.width = '0px'
+
+        if (contents) {
+            contents.style.animation = "closeContent 2s ease-in-out"
+        } else {
+            console.log("Content ID Not Found")
+        }
 
         setTimeout(()=>{
             blurA.style.display = "none"
