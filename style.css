@@ -302,6 +302,10 @@ body {
     overflow: hidden;
     text-align: center;
 }
+
+button:hover {
+    cursor: pointer;
+}
 /* JAVASCRIPT */
 @keyframes fadeIn {
     0% {
