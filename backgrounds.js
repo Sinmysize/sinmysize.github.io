@@ -18,39 +18,5 @@ const backgrounds = {
     13: `https://media.tenor.com/x52VWEVAKkQAAAAC/chill-city.gif`,
     14: `https://media.tenor.com/hNI_PyLniVUAAAAd/vaporwave-aesthetic.gif`
 }
-
-var randomnbum = Math.floor(Math.random() * 15)
-
-console.log(randomnbum)
-
-if ( randomnbum == 0 ) {
-    html.style.backgroundImage = "url('" + backgrounds[0] + "')"
-} else if ( randomnbum == 1) {
-    html.style.backgroundImage = "url('" + backgrounds[1] + "')"
-} else if ( randomnbum == 2) {
-    html.style.backgroundImage = "url('" + backgrounds[2] + "')"
-} else if ( randomnbum == 3) {
-    html.style.backgroundImage = "url('" + backgrounds[3] + "')"
-} else if ( randomnbum == 4) {
-    html.style.backgroundImage = "url('" + backgrounds[4] + "')"
-} else if ( randomnbum == 5) {
-    html.style.backgroundImage = "url('" + backgrounds[5] + "')"
-} else if ( randomnbum == 6) {
-    html.style.backgroundImage = "url('" + backgrounds[6] + "')"
-} else if ( randomnbum == 7) {
-    html.style.backgroundImage = "url('" + backgrounds[7] + "')"
-} else if ( randomnbum == 8) {
-    html.style.backgroundImage = "url('" + backgrounds[8] + "')"
-} else if ( randomnbum == 9) {
-    html.style.backgroundImage = "url('" + backgrounds[9] + "')"
-} else if ( randomnbum == 10) {
-    html.style.backgroundImage = "url('" + backgrounds[10] + "')"
-} else if ( randomnbum == 11) {
-    html.style.backgroundImage = "url('" + backgrounds[11] + "')"
-} else if ( randomnbum == 12) {
-    html.style.backgroundImage = "url('" + backgrounds[12] + "')"
-} else if ( randomnbum == 13) {
-    html.style.backgroundImage = "url('" + backgrounds[13] + "')"
-} else if ( randomnbum == 14) {
-    html.style.backgroundImage = "url('" + backgrounds[14] + "')"
-}
+const num = Math.floor(Math.random() * 15)
+html.style.backgroundImage = `url("${backgrounds[num]}")`
