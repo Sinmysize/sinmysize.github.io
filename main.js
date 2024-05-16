@@ -12,18 +12,14 @@ document.getElementById("login").addEventListener('click', ()=>{
     clock.style.animation = "clockFadeOut 0.5s ease-in"
     clock.style.opacity = "0"
 
-    setTimeout(()=>{
-        Background.style.backgroundColor = 'black'
-    }, 500)
+    setTimeout(()=>{Background.style.backgroundColor = 'black'}, 500)
 
-    setTimeout( ()=>{
-        window.open("home.html", "_self")
-    }, 1000)
+    setTimeout(()=>{window.open("home.html", "_self")}, 1000)
 })
 
 //clock
 
-function timeSet() {
+const timeSet = () => {
     //gets local time
     let date = new Date()
     let hh = date.getHours()
@@ -32,9 +28,7 @@ function timeSet() {
     let session = "AM"
 
     // Calculates Time
-    if (hh == 0) {
-        hh = 12
-    }
+    if (hh == 0) {hh = 12}
 
     if (hh > 12) {
         hh = hh - 12
@@ -48,9 +42,7 @@ function timeSet() {
     let time = hh + ':' + mm + ':' + ss + " " + session
 
     document.getElementById('clock').innerText = time
-    let t = setTimeout(()=>{
-        timeSet()
-    }, 1000)
+    let t = setTimeout(()=>{timeSet()}, 1000)
 }
 
 timeSet()
