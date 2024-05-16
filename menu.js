@@ -1,38 +1,29 @@
-
-var opened = false
+let opened = false
 
 //menu
 let menu = document.getElementById('menu')
 let blurA = document.getElementById("blur")
 
 document.getElementById('menuButton').addEventListener('click', ()=> {
-
-    if ( opened == false ) {
-
+    if (!opened) {
         menu.style.width = '250px'
         blurA.style.display = "block"
 
-        setTimeout(()=>{
-            blurA.style.opacity = "1"
-        },0)
+        setTimeout(()=>{blurA.style.opacity = "1"},0)
 
         opened = true
-    } else if ( opened == true ) {
-
+    } else {
         blurA.style.opacity = "0"
         menu.style.width = '0px'
         opened = false
 
-        setTimeout(()=>{
-            blurA.style.display = "none"
-        },200)
+        setTimeout(()=>{blurA.style.display = "none"},200)
     }
-    
 })
 
 //clock
 
-function timeSet() {
+const timeSet = () => {
     //gets local time
     let date = new Date()
     let hh = date.getHours()
@@ -41,9 +32,7 @@ function timeSet() {
     let session = "AM"
 
     // Calculates Time
-    if (hh == 0) {
-        hh = 12
-    }
+    if (hh == 0) {hh = 12}
 
     if (hh > 12) {
         hh = hh - 12
@@ -57,9 +46,7 @@ function timeSet() {
     let time = hh + ':' + mm + ':' + ss + " " + session
 
     document.getElementById('clock').innerText = time
-    let t = setTimeout(()=>{
-        timeSet()
-    }, 1000)
+    let t = setTimeout(()=>{timeSet()}, 1000)
 }
 
 timeSet()
@@ -68,11 +55,11 @@ timeSet()
 
 let homeOpen = false
 let aboutOpen = false
-let discordOpen = false
+let socialsOpen = false
 
 let home = document.getElementById("home")
 let about = document.getElementById("about")
-let discord = document.getElementById("discord")
+let socials = document.getElementById("socials")
 
 let topBar = document.getElementById('topbar')
 let anim  = document.getElementsByClassName("anim")[0]
@@ -82,10 +69,7 @@ let siteBG = document.getElementById("sitebg")
 let contents = document.getElementById("contents")
 
 home.addEventListener('click', ()=> {
-    if (homeOpen == true) {
-        return
-    } else if (homeOpen == false) {
-
+    if (!homeOpen) {
         topBar.style.animation = "FadeOutTopBar 1.5s ease-in-out"
         anim.style.opacity = '0'
         anim2.style.opacity = '0'
@@ -97,15 +81,9 @@ home.addEventListener('click', ()=> {
         blurA.style.opacity = "0"
         menu.style.width = '0px'
 
-        if (contents) {
-            contents.style.animation = "closeContent 2s ease-in-out"
-        } else {
-            console.log("Content ID Not Found")
-        }
+        if (contents) {contents.style.animation = "closeContent 2s ease-in-out"}
 
-        setTimeout(()=>{
-            blurA.style.display = "none"
-        },200)
+        setTimeout(()=>{blurA.style.display = "none"},200)
 
         setTimeout(()=>{
             window.open("home.html", "_self")
@@ -115,10 +93,7 @@ home.addEventListener('click', ()=> {
 })
 
 about.addEventListener("click", ()=>{
-    if (aboutOpen == true) {
-        return
-    } else if (aboutOpen == false) {
-
+    if (!aboutOpen) {
         topBar.style.animation = "FadeOutTopBar 1.5s ease-in-out"
         anim.style.opacity = '0'
         anim2.style.opacity = '0'
@@ -131,15 +106,9 @@ about.addEventListener("click", ()=>{
         blurA.style.opacity = "0"
         menu.style.width = '0px'
 
-        if (contents) {
-            contents.style.animation = "closeContent 2s ease-in-out"
-        } else {
-            console.log("Content ID Not Found")
-        }
+        if (contents) {contents.style.animation = "closeContent 2s ease-in-out"}
 
-        setTimeout(()=>{
-            blurA.style.display = "none"
-        },200)
+        setTimeout(()=>{blurA.style.display = "none"},200)
 
 
         setTimeout(()=>{
@@ -149,11 +118,8 @@ about.addEventListener("click", ()=>{
     }
 })
 
-discord.addEventListener("click", ()=>{
-    if (discordOpen == true) {
-        return 
-    } else if (discordOpen == false) {
-
+socials.addEventListener("click", ()=>{
+    if (!socialsOpen) {
         topBar.style.animation = "FadeOutTopBar 1.5s ease-in-out"
         anim.style.opacity = '0'
         anim2.style.opacity = '0'
@@ -166,19 +132,13 @@ discord.addEventListener("click", ()=>{
         blurA.style.opacity = "0"
         menu.style.width = '0px'
 
-        if (contents) {
-            contents.style.animation = "closeContent 2s ease-in-out"
-        } else {
-            console.log("Content ID Not Found")
-        }
+        if (contents) {contents.style.animation = "closeContent 2s ease-in-out"}
 
-        setTimeout(()=>{
-            blurA.style.display = "none"
-        },200)
+        setTimeout(()=>{blurA.style.display = "none"},200)
 
         setTimeout(()=>{
             window.open("socials.html", "_self")
-            discordOpen = true
+            socialsOpen = true
         }, 1500)
     }
 })
