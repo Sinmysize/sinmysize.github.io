@@ -58,6 +58,7 @@
     box-shadow: 0px 0px 5px;
     text-shadow: 0px 0px 3px;
     transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 .loginButton:hover {
@@ -285,6 +286,11 @@
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.195);
 }
 
+* {
+    scrollbar-color: rgba(255, 255, 255, 0.195) transparent;
+}
+
+
 .text{
     font-size: 25px;
     margin: 35px;
@@ -294,7 +300,6 @@
 }
 
 html {
-    background-image: url();
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -303,6 +308,7 @@ html {
     color: white;
     background-color: black;
     margin: 0;
+    height: 100%;
 }
 
 body {

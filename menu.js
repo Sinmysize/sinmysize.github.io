@@ -142,3 +142,7 @@ socials.addEventListener("click", ()=>{
         }, 1500)
     }
 })
+
+if (navigator.userAgent.includes("Firefox")) {
+    console.log("OMG FIREFOX USERRRR\nHII HIII HIII HIII HIII HIII HIIIIII SUPER SECRET EASTER EGGG\nFIREFOX >> CHROMIUM GAYWARE")
+}
